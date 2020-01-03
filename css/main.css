@@ -1,0 +1,255 @@
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background: #000000;
+  margin: 0;
+  min-height: 768px;
+}
+
+.wrapper {
+  position: relative;
+  min-height: 100%;
+  overflow: hidden;
+}
+
+.snow {
+  z-index: 200;
+  position: absolute;
+  top: -50px;
+  left: 0;
+  color: #ffffff;
+}
+
+.road {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 500%;
+  height: 615px;
+  background: url("../images/road-add.svg") repeat-x;
+  -webkit-animation: road 5s linear infinite;
+  animation: road 5s linear infinite;
+}
+
+.cloud {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.cloud.cloud02 {
+  top: 145px;
+  right: 10px;
+  left: inherit;
+}
+
+.sun {
+  position: absolute;
+  top: 50px;
+  right: 200px;
+  width: 106px;
+  height: 106px;
+  border-radius: 50%;
+  background: #fff8a7;
+}
+
+.mound {
+  z-index: -1;
+  position: absolute;
+  right: 400px;
+  bottom: 250px;
+}
+
+.shrub {
+  z-index: 10;
+  position: absolute;
+  right: 85%;
+  bottom: 0;
+}
+
+.shrub.shrub02 {
+  right: 5%;
+  bottom: 225px;
+  left: inherit;
+}
+
+.tree {
+  position: absolute;
+  right: 5%;
+  bottom: 230px;
+}
+
+.tree.tree02 {
+  right: 84%;
+  bottom: 240px;
+}
+
+.snow {
+  position: absolute;
+  right: 20%;
+  bottom: 90px;
+}
+
+.snow.snow02 {
+  right: 50%;
+  bottom: 130px;
+}
+
+.car-block {
+  position: absolute;
+  bottom: 125px;
+  left: 345px;
+}
+
+.car-block .wheel {
+  position: absolute;
+  bottom: -25px;
+  left: 25px;
+  width: 73px;
+  height: 73px;
+  z-index: 20;
+  -webkit-animation: rotateInfinite 1s linear infinite;
+  animation: rotateInfinite 1s linear infinite;
+}
+.car-block .car {
+  width: 345px;
+  height: 114px;
+  position: relative;
+  z-index: 10;
+  -webkit-animation: carmove 3s infinite linear;
+  animation: carmove 3s infinite linear;
+}
+
+.car-block .wheel.wheel02 {
+  right: 25px;
+  bottom: -25px;
+  left: initial;
+}
+
+.car-block .smoke {
+  position: absolute;
+  bottom: 15px;
+  left: -52px;
+  animation: pulse 3s infinite linear;
+}
+
+.santa {
+  position: absolute;
+  bottom: 45px;
+  left: 106px;
+}
+.player {
+  width: 100%;
+  position: absolute;
+  top: -9999px;
+  left: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn-player {
+  width: 32px;
+  height: 32px;
+  background: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 10px 0 0;
+  color: #000;
+  cursor: pointer;
+}
+@keyframes rotateInfinite {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  50% {
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes road {
+  100% {
+    -webkit-transform: translateX(-2200px);
+    transform: translateX(-2200px);
+  }
+}
+
+@keyframes moveThegroundRight {
+  90% {
+    left: 100%;
+    opacity: 1;
+  }
+
+  95%, 100% {
+    left: 1300%;
+    opacity: 0;
+  }
+}
+@keyframes carmove{
+  0%{
+    transform: translateY(0px);
+  }
+  25%{
+    transform: translateY(1px);
+  }
+  30%{
+    transform: translateY(2px);
+  }
+  35%{
+    transform: translateY(3px);
+  }
+  45%{
+    transform: translateY(0px);
+  }
+  50%{
+    transform: translateY(1px);
+  }
+  55%{
+    transform: translateY(2px);
+  }
+  60%{
+    transform: translateY(3px);
+  }
+  75%{
+    transform: translateY(1px);
+  }
+  100%{
+    transform: translateY(0px);
+  }
+}
+@keyframes pulse {
+	0% {
+		transform: scale(0.75);
+		opacity: 1;
+	}
+
+	70% {
+		transform: scale(1);
+		opacity: 0;
+	}
+
+	100% {
+		transform: scale(0.75);
+		opacity: 0;
+	}
+}
+@media (max-width: 767px) {
+  body {
+    min-height: 100%;
+  }
+}
