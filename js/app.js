@@ -8,7 +8,7 @@ function initAnimation() {
 	$cloud = $(".cloud"),
 	$sun = $(".sun"),
 	$player = $(".player"),
-	x = 3500,
+	x = 2000,
 	originalColor = $el.css("background");
 	$el.css("background", "#c2e9f8");
 	setTimeout(function(){
