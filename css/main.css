@@ -183,10 +183,9 @@ body {
 }
 
 @keyframes road {
-  100% {
-    -webkit-transform: translateX(-2200px);
-    transform: translateX(-2200px);
-  }
+    100% {
+        transform: translateX(-3500px);
+    }
 }
 
 @keyframes moveThegroundRight {
